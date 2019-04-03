@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Elements</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="Health medical template project">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="/styles/bootstrap4/bootstrap.min.css">
+<link href="/plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="/styles/elements.css">
+<link rel="stylesheet" type="text/css" href="/styles/elements_responsive.css">
+</head>
+<body>
+
+<div class="super_container">
+
+	<!-- Menu -->
+
+	<div class="menu trans_500">
+		<div class="menu_content d-flex flex-column align-items-center justify-content-center text-center">
+			<div class="menu_close_container"><div class="menu_close"></div></div>
+			
+			<ul>
+				<li class="menu_item"><a th:href="@{/index/index}">Accueil</a></li>
+				<li class="menu_item"><a th:href="@{/index/about}">Apropos de nous</a></li>
+				<li class="menu_item"><a th:href="@{/index/services}">Services</a></li>
+				<li class="menu_item"><a th:href="@{/index/news}">Nouvelles</a></li>
+				<li class="menu_item"><a th:href="@{/index/contact}">Contact</a></li>
+			</ul>
+		</div>
+		<div class="menu_social">
+			<ul>
+				<li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+			</ul>
+		</div>
+	</div>
+	
+	<!-- Home -->
+
+	<div class="home">
+		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="/images/medecin.png" data-speed="0.8"></div>
+
+		<!-- Header -->
+
+		<header class="header" id="header">
+			<div>
+				<div class="header_top">
+					<div class="container">
+						<div class="row">
+							<div class="col">
+								<div class="header_top_content d-flex flex-row align-items-center justify-content-start">
+									<div class="logo">
+										<a href="#">SOS_HOPITAL<span>+</span></a>	
+									</div>
+									<div class="header_top_extra d-flex flex-row align-items-center justify-content-start ml-auto">
+										<div class="header_top_nav">
+											<ul class="d-flex flex-row align-items-center justify-content-start">
+												<li><a href="#">Bureau d'Aide</a></li>
+												<li><a href="#">Services d'Urgences</a></li>
+												<li><a th:href="@{/index/form}">Rendez-vous</a></li>
+											</ul>
+										</div>
+										<div class="header_top_phone">
+											<i class="fa fa-phone" aria-hidden="true"></i>
+											<span>+34 586 778 8892</span>
+										</div>
+									</div>
+									<div class="hamburger ml-auto"><i class="fa fa-bars" aria-hidden="true"></i></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="header_nav" id="header_nav_pin">
+					<div class="header_nav_inner">
+						<div class="header_nav_container">
+							<div class="container">
+								<div class="row">
+									<div class="col">
+										<div class="header_nav_content d-flex flex-row align-items-center justify-content-start">
+											<nav class="main_nav">
+												<ul class="d-flex flex-row align-items-center justify-content-start">
+				<li class="menu_item"><a th:href="@{/index/index}">Accueil</a></li>
+				<li class="active"><a href="#">A propos de nous</a></li>
+				<li class="menu_item"><a th:href="@{/index/services}">Services</a></li>
+				<li class="menu_item"><a th:href="@{/index/news}">Nouvelles</a></li>
+				<li class="menu_item"><a th:href="@{/index/contact}">Contact</a></li>
+												</ul>
+											</nav>
+											<div class="search_content d-flex flex-row align-items-center justify-content-end ml-auto">
+												
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>	
+			</div>
+		</header>
+
+		<div class="home_container">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<div class="home_content">
+							<div class="home_title">Médecins Disponible</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+      <div class="space">
+         <table border="1" class="table table-bordered" >
+            <thead class="thead-dark">
+            <tr><h1></h1></tr>
+            <tr>
+               <th scope="col">id medecin</th>
+               <th scope="col">code medecin</th>
+               <th scope="col">telefone</th>
+               <th scope="col">Nom</th>
+               <th scope="col">Prénom</th>
+               <th scope="col">adresse Medecin</th>
+               <th scope="col">Specialité</th>
+               <th scope="col">Hôpital Associé</th>
+
+            </tr>
+            
+            <tr th:each ="person : ${medecins}" class="table-light">
+               <td th:text="${person.idMedecin}" >...</td>
+               <td th:text="${person.codeMedecin}" >...</td>
+               <td th:text="${person.telefoneMedecin}" >...</td>
+               
+               <td th:text="${person.nomMedecin}" >...</td>
+               <td th:text="${person.prenomMedecin}" >...</td>
+               <td th:text="${person.adresseMedecin}" >...</td>
+               <td th:text="${person.speciality}" >...</td>
+               <td th:text="${person.hopitalMedecin.nomHopital}" >...</td>
+            </tr>
+         </table>
+                  <div><a th:href="@{/index/about}"><img src="/images/precedent.png" alt="precedent" class="prec"></a></div>
+         
+      </div>
+
+	
+<script src="/js/jquery-3.3.1.min.js"></script>
+<script src="/styles/bootstrap4/popper.js"></script>
+<script src="/styles/bootstrap4/bootstrap.min.js"></script>
+<script src="/plugins/greensock/TweenMax.min.js"></script>
+<script src="/plugins/greensock/TimelineMax.min.js"></script>
+<script src="/plugins/scrollmagic/ScrollMagic.min.js"></script>
+<script src="/plugins/greensock/animation.gsap.min.js"></script>
+<script src="/plugins/greensock/ScrollToPlugin.min.js"></script>
+<script src="/plugins/easing/easing.js"></script>
+<script src="/plugins/progressbar/progressbar.min.js"></script>
+<script src="/plugins/parallax-js-master/parallax.min.js"></script>
+<script src="/js/elements.js"></script>
+</body>
+</html>

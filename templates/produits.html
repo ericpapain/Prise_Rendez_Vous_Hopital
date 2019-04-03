@@ -1,0 +1,42 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="f" %>
+<!DOCTYPE html">
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Catalogue de produits</title>
+<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()
+%>/resources/css/style.css">
+<title>Formulaire</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="Health medical template project">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css">
+<link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.carousel.css">
+<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
+<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css">
+<link rel="stylesheet" type="text/css" href="styles/form.css">
+<link rel="stylesheet" type="text/css" href="styles/form_responsive.css">
+</head>
+
+
+<body>
+      <div class="col-lg-6 info_box_col">
+        <div class="info_form_container">
+          <div class="info_form_subtitle">Prendre Rendez-vous</div>
+          <f:form class="info_form" modelAttribute="produit" method="post" action="saveProduit" id="info_form">
+            <f:input type="text" class="info_input" placeholder="Nom" path="nomPatient" required="required">
+            <f:input type="text" class="info_input" placeholder="Prenom" path="prenomPatient" required="required">
+            <f:input type="text" class="info_input" placeholder="Adresse" path="adressePatient" required="required">
+            <f:input type="text" class="info_input" placeholder="Téléphone" path="telefonePatient" required="required">
+            <f:input type="email" class="info_input" placeholder="Adresse E-mail" path="emailPatient">
+			<button class="footer_contact_button" type="submit">Prendre Rendez-vous</button>
+          </form>
+        </div>
+      </div>
+
+</body>
+
+</html>

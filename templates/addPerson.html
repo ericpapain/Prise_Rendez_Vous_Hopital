@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+   <head>
+      <meta charset="UTF-8" />
+      <title>Add Person</title>
+      <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
+   </head>
+   <body>
+      <h1>Create a Person:</h1>
+          
+      <form th:action="@{/addPatient}" method="get">
+         
+         <label for="exampleInputEmail1">nom</label>
+         <div class="form-group">
+         <input type="text" name="nomPatient" />    
+         <br/>
+         </div>
+         
+         
+		 <label for="exampleInputEmail1">prenom</label>         
+          <div class="form-group">
+         <input type="text" name="prenomPatient" />     
+         <br/>
+         <label for="exampleInputEmail1">adresse patient</label>         
+          <div class="form-group">
+         <input type="text" name="adressePatient" />     
+         <br/>
+<!--          <label for="exampleInputEmail1">telefone</label>          -->
+<!--           <div class="form-group"> -->
+<!--          <input type="text" name="telefonePatient" />      -->
+<!--          <br/> -->
+         <label for="exampleInputEmail1">email</label>         
+          <div class="form-group">
+         <input type="text" name="emailPatient" />     
+         <br/>
+           
+         </div>
+         
+         <button type="submit" class="btn btn-primary">Create</button>
+     <!--  <input type="submit" value="Create" /> -->  
+      </form>
+       
+      <br/>
+       
+      <!-- Check if errorMessage is not null and not empty -->
+       
+      <div th:if="${errorMessage}" th:utext="${errorMessage}"
+         style="color:red;font-style:italic;">
+         ...
+      </div>
+       
+   </body>
+</html>

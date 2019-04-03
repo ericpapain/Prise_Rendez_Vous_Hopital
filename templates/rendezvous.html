@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+ <head>
+ <meta charset="UTF-8">
+	<title>Person List</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
+ </head>
+<body>
+	<h1>Person List</h1>
+      <a href="addPerson">Add Person</a>
+      <br/><br/>
+      <div>
+      
+         <h4><b>rendez vous generer automatiquement</b></h4> 
+         <h1>rendezVouss Database</h1> 
+         
+         <div th:each="rendezVous : ${rendezVous}">
+        			 <label for="rendezVous">idRendezVous</label>  
+         	 
+         	 
+         		<b><label th:text="${rendezVous.idRendezVous}"></label></b><br> 
+        			 <label for="rendezVous">plageRV</label>   
+  
+         			<b><label th:text="${heure}"></label></b> <br> 
+ 	
+         			 <label for="rendezVous">hopitialDuRendezVous</label>
+         		<b><label th:text="${rendezVous.hopitialDuRendezVous.nomHopital}"></label></b><br>
+       
+         			<label for="rendezVous">patientRdv</label>
+         		<b><label th:text="${rendezVous.patientRdv.nomPatient}"></label></b></br>
+         		
+         			<label for="rendezVous">code medecin</label>   
+            	<b><label th:text="${rendezVous.medecinAssocierAuRDV.codeMedecin}"></label></b></br>
+            		<label for="rendezVous">medecinAssocierAuRDV</label>
+            	<b><label th:text="${rendezVous.medecinAssocierAuRDV.nomMedecin}"></label></b>
+            	<b><label th:text="${rendezVous.medecinAssocierAuRDV.prenomMedecin}"></label></b><br><br><br>
+         		
+         </div>
+         
+      </div>
+</body>
+</html>

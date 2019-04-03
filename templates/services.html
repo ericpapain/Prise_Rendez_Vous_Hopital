@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Services</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="Health medical template project">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="/styles/bootstrap4/bootstrap.min.css">
+<link href="/plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="/plugins/OwlCarousel2-2.2.1/owl.carousel.css">
+<link rel="stylesheet" type="text/css" href="/plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
+<link rel="stylesheet" type="text/css" href="/plugins/OwlCarousel2-2.2.1/animate.css">
+<link rel="stylesheet" type="text/css" href="/styles/services.css">
+<link rel="stylesheet" type="text/css" href="/styles/services_responsive.css">
+</head>
+<body>
+
+<div class="super_container">
+
+	<!-- Menu -->
+
+	<div class="menu trans_500">
+		<div class="menu_content d-flex flex-column align-items-center justify-content-center text-center">
+			<div class="menu_close_container"><div class="menu_close"></div></div>
+			<form  class="info_form" id="info_form" >
+				<input type="text" class="menu_search_input"  placeholder="entrer code patient recherché" required="required">
+				<button  class="menu_search_button"><i class="fa fa-search" aria-hidden="true"></i></button>
+			</form>
+			<ul>
+				<li class="menu_item"><a th:href="@{/index/index}">Accueil</a></li>
+				<li class="menu_item"><a th:href="@{/index/about}">Apropos de nous</a></li>
+				<li class="menu_item"><a th:href="@{/index/services}">Services</a></li>
+				<li class="menu_item"><a th:href="@{/index/news}">Nouvelles</a></li>
+				<li class="menu_item"><a th:href="@{/index/contact}">Contact</a></li>
+			</ul>
+		</div>
+		<div class="menu_social">
+			<ul>
+				<li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- Home -->
+
+	<div class="home">
+		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="/images/service1noir.jpg" data-speed="0.8"></div>
+
+		<!-- Header -->
+
+		<header class="header" id="header">
+			<div>
+				<div class="header_top">
+					<div class="container">
+						<div class="row">
+							<div class="col">
+								<div class="header_top_content d-flex flex-row align-items-center justify-content-start">
+									<div class="logo">
+										<a href="#">SOS_HOPITAL<span>+</span></a>
+									</div>
+									<div class="header_top_extra d-flex flex-row align-items-center justify-content-start ml-auto">
+										<div class="header_top_nav">
+											<ul class="d-flex flex-row align-items-center justify-content-start">
+												<li><a href="#">Bureau d'Aide</a></li>
+												<li><a href="#">Services d'Urgences</a></li>
+												<li><a href="form.html">Rendez-vous</a></li>
+											</ul>
+										</div>
+										<div class="header_top_phone">
+											<i class="fa fa-phone" aria-hidden="true"></i>
+											<span>+840857646249</span>
+										</div>
+									</div>
+									<div class="hamburger ml-auto"><i class="fa fa-bars" aria-hidden="true"></i></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="header_nav" id="header_nav_pin">
+					<div class="header_nav_inner">
+						<div class="header_nav_container">
+							<div class="container">
+								<div class="row">
+									<div class="col">
+										<div class="header_nav_content d-flex flex-row align-items-center justify-content-start">
+											<nav class="main_nav">
+												<ul class="d-flex flex-row align-items-center justify-content-start">
+				<li class="menu_item"><a th:href="@{/index/index}">Accueil</a></li>
+				<li class="active"><a th:href="@{/index/about}">A propos de nous</a></li>
+				<li class="menu_item"><a th:href="@{/index/services}">Services</a></li>
+				<li class="menu_item"><a th:href="@{/index/news}">Nouvelles</a></li>
+				<li class="menu_item"><a th:href="@{/index/contact}">Contact</a></li>
+												</ul>
+											</nav>
+											<div class="search_content d-flex flex-row align-items-center justify-content-end ml-auto">
+												<form  class="info_form" id="info_form" >
+				<input type="text" class="menu_search_input"  placeholder="entrer code patient recherché" required="required">
+				<button  class="menu_search_button"><i class="fa fa-search" aria-hidden="true"></i></button>
+			</form>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<div class="home_container">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<div class="home_content">
+							<div class="home_title">Services</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Services -->
+
+	<div class="services">
+		<div class="container">
+			<div class="row">
+				<div class="col text-center">
+					<div class="section_title">Nos Services</div>
+					<div class="section_subtitle">Merci</div>
+				</div>
+			</div>
+			<div class="row icon_boxes_row">
+
+				<!-- Icon Box -->
+				<div class="col-xl-4 col-lg-6">
+					<div class="icon_box">
+						<div class="icon_box_title_container d-flex flex-row align-items-center justify-content-start">
+							<div class="icon_box_icon"><img src="/images/icon_1.svg" alt=""></div>
+							<div class="icon_box_title">Cardiologie</div>
+						</div>
+						<div class="icon_box_text">Les affections du système cardiovasculaire ne, se limitent malheureusement pas au trop célèbre infarctus. Petit tour d’horizon des principales pathologies, du cœur et de la circulation sanguine.</div>
+						<div class="button services_button ml-auto mr-auto"><a th:href="@{/index/form}"><span>Rendez-vous</span><span>Rendez-vous</span></a></div>
+					</div>
+				</div>
+
+				<!-- Icon Box -->
+				<div class="col-xl-4 col-lg-6">
+					<div class="icon_box">
+						<div class="icon_box_title_container d-flex flex-row align-items-center justify-content-start">
+							<div class="icon_box_icon"><img src="/images/icon_2.svg" alt=""></div>
+							<div class="icon_box_title">Gastroentérologie</div>
+						</div>
+						<div class="icon_box_text">La gastro-entérologie ou gastroentérologie est la spécialité, médicale qui étudie le système digestif et ses maladies. Celui-ci comprend le tube alimentaire, qui s'étend des organes de la bouche à l'anus, le foie, les voies biliaires et le pancréas.</div>
+						<div class="button services_button ml-auto mr-auto"><a th:href="@{/index/form}"><span>Rendez-vous</span><span>Rendez-vous</span></a></div>
+					</div>
+				</div>
+
+				<!-- Icon Box -->
+				<div class="col-xl-4 col-lg-6">
+					<div class="icon_box">
+						<div class="icon_box_title_container d-flex flex-row align-items-center justify-content-start">
+							<div class="icon_box_icon"><img src="/images/icon_3.svg" alt=""></div>
+							<div class="icon_box_title">Laboratoire Medical</div>
+						</div>
+						<div class="icon_box_text">Un laboratoire de biologie médicale (abrégé en LBM), ou, anciennement, laboratoire d'analyses médicales, est un lieu où sont prélevés et analysés divers, fluides biologiques d'origine humaine sous, la responsabilité des biologistes médicaux,.</div>
+						<div class="button services_button ml-auto mr-auto"><a th:href="@{/index/form}"><span>Rendez-vous</span><span>Rendez-vous</span></a></div>
+					</div>
+				</div>
+
+				<!-- Icon Box -->
+				<div class="col-xl-4 col-lg-6">
+					<div class="icon_box">
+						<div class="icon_box_title_container d-flex flex-row align-items-center justify-content-start">
+							<div class="icon_box_icon"><img src="/images/icon_4.svg" alt=""></div>
+							<div class="icon_box_title">Soins Dentaires</div>
+						</div>
+						<div class="icon_box_text">Même sans problème apparent, il est important de consulter régulièrement votre dentiste. Ces visites de contrôle lui permettront d'effectuer, des soins préventifs, tel que le détartrage et de diagnostiquer des problèmes, dentaires avant qu'ils vous fassent souffrir. </div>
+						<div class="button services_button ml-auto mr-auto"><a th:href="@{/index/form}"><span>Rendez-vous</span><span>Rendez-vous</span></a></div>
+					</div>
+				</div>
+
+				<!-- Icon Box -->
+				<div class="col-xl-4 col-lg-6">
+					<div class="icon_box">
+						<div class="icon_box_title_container d-flex flex-row align-items-center justify-content-start">
+							<div class="icon_box_icon"><img src="/images/icon_5.svg" alt=""></div>
+							<div class="icon_box_title">La chirurgie</div>
+						</div>
+						<div class="icon_box_text">La chirurgie est la partie de la thérapeutique qui implique des, opérations internes ou des manœuvres externes1 sur les tissus, notamment par incision et suture. Un chirurgien est un, professionnel de la santé habilité à pratiquer la chirurgie (médecin spécialiste, chirurgien-dentiste, vétérinaire).</div>
+						<div class="button services_button ml-auto mr-auto"><a th:href="@{/index/form}"><span>Rendez-vous</span><span>Rendez-vous</span></a></div>
+					</div>
+				</div>
+
+				<!-- Icon Box -->
+				<div class="col-xl-4 col-lg-6">
+					<div class="icon_box">
+						<div class="icon_box_title_container d-flex flex-row align-items-center justify-content-start">
+							<div class="icon_box_icon"><img src="/images/icon_6.svg" alt=""></div>
+							<div class="icon_box_title">Neurologie</div>
+						</div>
+						<div class="icon_box_text">La neurologie est une branche de la médecine traitant des troubles du système nerveux. La neurologie traite du diagnostic et du traitement de toutes les catégories d'affections et de maladies du système nerveux central et périphérique, y compris leurs revêtements, les vaisseaux sanguins et tous les tissus effecteurs.</div>
+						<div class="button services_button ml-auto mr-auto"><a th:href="@{/index/form}"><span>Rendez-vous</span><span>Rendez-vous</span></a></div>
+					</div>
+				</div>
+
+	<!-- Boxes -->
+
+	<div class="boxes d-flex flex-lg-row flex-column align-items-start justify-content-start">
+
+		<!-- Box -->
+		<div class="box">
+			<div class="background_image" style="background-image:url(/images/box_1.jpg)"></div>
+			<div class="box_title">Notre Vision</div>
+			<div class="box_subtitle">Regarde</div>
+			<div class="box_text">La vision de notre societe ou encore de notre systeme,premierement c'est de rendre a tout un chacun, la possibilite d'avoir une vie sainte sur le plan, sanitaire et donner la aux gens de mieux consevoir leurs deplacements, afin de se faire soigner sans trop de risque.</div>
+			<div class="button button_2 box_button"><a href="#"><span>Lire la  Suite</span><span>Lire la  Suite</span></a></div>
+		</div>
+
+		<!-- Box -->
+		<div class="box">
+			<div class="background_image" style="background-image:url(/images/box_2.jpg)"></div>
+			<div class="box_title">Notre centre</div>
+			<div class="box_subtitle">Regarde</div>
+			<div class="box_text">Structure sanitaire à part entière, le centre est un mode d'organisation de prise en charge des patients de proximité. Dans le cadre des réflexions sur les moyens de mise en commun des activités médicales et de coordination des premiers recours aux soinsss.</div>
+			<div class="button box_button"><a href="#"><span>Lire la  Suite</span><span>Lire la  Suite</span></a></div>
+		</div>
+
+		<!-- Box -->
+		<div class="box">
+			<div class="background_image" style="background-image:url(/images/box_3.jpg)"></div>
+			<div class="box_title">Notre Mission</div>
+			<div class="box_subtitle">Regarde</div>
+			<div class="box_text">A l'hôpital, notre principale mission sur la santé concerne l'éducation à la santé des patients. Prendre en compte toutes les dimensions de la pathologie, introduire davantage de transversalité entre les services, mais aussi accompagner le patient dans leur vie.</div>
+			<div class="button box_button"><a href="#"><span>Lire la  Suite</span><span>Lire la  Suite</span></a></div>
+		</div>
+
+	</div>
+
+	<!-- Tabs -->
+
+						<!-- Panel -->
+						<div class="tab_panel">
+							<div class="tab_panel_content">
+								<div class="tab_list">
+									<ul>
+										<li>
+											<div class="tab_list_title">Cardiologie</div>
+											<div class="tab_list_text"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem maximus malesuad.</p></div>
+										</li>
+										<li>
+											<div class="tab_list_title">Gastroentérologie</div>
+											<div class="tab_list_text"><p>Donec malesuada lorem maximus mauris scele risque, at rutrum nulla dictum.</p></div>
+										</li>
+										<li>
+											<div class="tab_list_title">Laboratoire médical</div>
+											<div class="tab_list_text"><p>Lorem maximus mauris scelerisque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus.</p></div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<!-- Panel -->
+						<div class="tab_panel">
+							<div class="tab_panel_content">
+								<div class="tab_list">
+									<ul>
+										<li>
+											<div class="tab_list_title">Cardiologie</div>
+											<div class="tab_list_text"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem maximus malesuad.</p></div>
+										</li>
+										<li>
+											<div class="tab_list_title">Gastroentérologie</div>
+											<div class="tab_list_text"><p>Donec malesuada lorem maximus mauris scele risque, at rutrum nulla dictum.</p></div>
+										</li>
+										<li>
+											<div class="tab_list_title">Laboratoire médical</div>
+											<div class="tab_list_text"><p>Lorem maximus mauris scelerisque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus.</p></div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<!-- Panel -->
+						<div class="tab_panel">
+							<div class="tab_panel_content">
+								<div class="tab_list">
+									<ul>
+										<li>
+											<div class="tab_list_title">Cardiologie</div>
+											<div class="tab_list_text"><p>Les affections du système cardiovasculaire ne se limitent, malheureusement pas au trop célèbre infarctus. Petit tour d’horizon des principales pathologies, du cœur et de la circulation sanguine.</p></div>
+										</li>
+										<li>
+											<div class="tab_list_title">Gastroentérologie</div>
+											<div class="tab_list_text"><p>Donec malesuada lorem maximus mauris scele risque, at rutrum nulla dictum.</p></div>
+										</li>
+										<li>
+											<div class="tab_list_title">Laboratoire médical</div>
+											<div class="tab_list_text"><p>Lorem maximus mauris scelerisque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus.</p></div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Footer -->
+
+	<footer class="footer">
+		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="/images/footer.jpg" data-speed="0.8"></div>
+		<div class="footer_content">
+			<div class="container">
+				<div class="row">
+
+					<!-- Footer About -->
+					<div class="col-lg-3 footer_col">
+						<div class="footer_about">
+							<div class="logo">
+								<a href="#">SOS_HOPITAL<span>+</span></a>
+							</div>
+							<div class="footer_about_text">C'est un logiciel qui evitera, les embouteillages dans les hopitaux, et permettre aux patients d'acceder a un medecin en temps reel.</div>
+							<div class="footer_social">
+								<ul class="d-flex flex-row align-items-center justify-content-start">
+									<li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+									<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+									<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+									<li><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+									<li><a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a></li>
+									<li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+								</ul>
+							</div>
+							<div class="copyright"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Eric Papain Mezatio & Kenley Favard</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+</div>
+						</div>
+					</div>
+
+					<!-- Footer Contact -->
+					<div class="col-lg-5 footer_col">
+						<div class="footer_contact">
+							<div class="footer_contact_title">Contact rapide</div>
+							<div class="footer_contact_form_container">
+								<form action="#" class="footer_contact_form" id="footer_contact_form">
+									<div class="d-flex flex-xl-row flex-column align-items-center justify-content-between">
+										<input type="text" class="footer_contact_input" placeholder="Nom" required="required">
+										<input type="email" class="footer_contact_input" placeholder="E-mail" required="required">
+									</div>
+									<textarea class="footer_contact_input footer_contact_textarea" placeholder="Message" required="required"></textarea>
+									<button class="footer_contact_button">envoyez nous un message</button>
+								</form>
+							</div>
+						</div>
+					</div>
+
+					<!-- Footer Hours -->
+					<div class="col-lg-4 footer_col">
+						<div class="footer_hours">
+							<div class="footer_hours_title">Heure d'Ouverture</div>
+							<ul class="hours_list">
+								<li class="d-flex flex-row align-items-center justify-content-start">
+									<div>Lundi – Jeudi</div>
+									<div class="ml-auto">8.00 – 19.00</div>
+								</li>
+								<li class="d-flex flex-row align-items-center justify-content-start">
+									<div>Vendredi</div>
+									<div class="ml-auto">8.00 - 18.30</div>
+								</li>
+								<li class="d-flex flex-row align-items-center justify-content-start">
+									<div>Samedi</div>
+									<div class="ml-auto">9.30 – 17.00</div>
+								</li>
+								<li class="d-flex flex-row align-items-center justify-content-start">
+									<div>Dimanche</div>
+									<div class="ml-auto">9.30 – 15.00</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer_bar">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<div class="footer_bar_content d-flex flex-sm-row flex-column align-items-lg-center align-items-start justify-content-start">
+							<nav class="footer_nav">
+								<ul class="d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-start">
+									<li class="active"><a href="index.html">Accueil</a></li>
+									<li><a href="about.html">Apropos de nous</a></li>
+									<li><a href="services.html">Services</a></li>
+									<li><a href="news.html">Nouvelles</a></li>
+									<li><a href="contact.html">Contact</a></li>
+								</ul>
+							</nav>
+							<div class="footer_links">
+								<ul class="d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-start">
+									<li><a href="#">Bureau d'Aide</a></li>
+									<li><a href="#">Services d'Urgences</a></li>
+									<li><a href="#">Rendez-vous</a></li>
+								</ul>
+							</div>
+							<div class="footer_phone ml-lg-auto">
+								<i class="fa fa-phone" aria-hidden="true"></i>
+								<span>+840857646249</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+</div>
+
+<script src="/js/jquery-3.3.1.min.js"></script>
+<script src="/styles/bootstrap4/popper.js"></script>
+<script src="/styles/bootstrap4/bootstrap.min.js"></script>
+<script src="/plugins/greensock/TweenMax.min.js"></script>
+<script src="/plugins/greensock/TimelineMax.min.js"></script>
+<script src="/plugins/scrollmagic/ScrollMagic.min.js"></script>
+<script src="/plugins/greensock/animation.gsap.min.js"></script>
+<script src="/plugins/greensock/ScrollToPlugin.min.js"></script>
+<script src="/plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
+<script src="/plugins/easing/easing.js"></script>
+<script src="/plugins/parallax-js-master/parallax.min.js"></script>
+<script src="/js/services.js"></script>
+</body>
+</html>

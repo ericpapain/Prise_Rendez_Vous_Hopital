@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Apropos</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="Health medical template project">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="/styles/bootstrap4/bootstrap.min.css">
+<link href="/plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="/plugins/OwlCarousel2-2.2.1/owl.carousel.css">
+<link rel="stylesheet" type="text/css" href="/plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
+<link rel="stylesheet" type="text/css" href="/plugins/OwlCarousel2-2.2.1/animate.css">
+<link rel="stylesheet" type="text/css" href="/styles/about.css">
+<link rel="stylesheet" type="text/css" href="/styles/about_responsive.css">
+<link rel="stylesheet" type="text/css" href="/styles/rendezvous.css">
+
+</head>
+
+<body>
+
+<center>
+<div class="container">
+
+
+	 <div class="row">
+        <div class="col text-center">
+          <div class="info_form_title"><p><h3>Votre Rendez est disponible</h3></p></div>
+        </div>
+      </div>
+		<div class="rdv">
+						<div class="infoshead">
+							<i>Informations relative a votre rendez vous!</i>
+						</div>
+			<div class="infosRdv">
+										<div th:object="${patientsauver}">
+											
+										<fieldset class="patient">
+										<legend><b>Patient</b></legend>
+											<div class="label">
+													<label><b>Code :</b>.................................................................. </label>											
+													<label th:text="${patientsauver.codePatient}"></label>
+												</div>
+												<div class="label">
+													<label><b>Patient:</b> ...............................................................</label>
+													<label th:text="${patientsauver.nomPatient}"></label>
+													   <label th:text="${patientsauver.prenomPatient}"></label>
+												</div>
+												
+												<div class="label">
+													<label><b>Adresse :</b>............................................................. </label>
+													<label th:text="${patientsauver.adressePatient}"></label>
+												</div>
+												<div class="label">
+													<label><b>Téléfone :</b>......................................................... +</label>
+													<label th:text="${patientsauver.telefonePatient}"></label>
+												</div>
+												<div class="label">
+													<label><b>Service désirer :</b>.................................................. </label>												
+													<label th:text="${patientsauver.choixServices}"></label>
+												</div>
+												<div class="label">
+													<label><b>Date d'enregistrement :</b>...................................... </label>											
+													<label th:text="${patientsauver.dateEnregistrement}"></label>
+												</div>	
+												<div class="label">
+													<label><b>Email :</b>...........................................018
+													................ </label>
+													<label th:text="${patientsauver.emailPatient}"></label>
+												</div>
+												
+									</fieldset>
+												
+									<fieldset class="medecin">
+									<legend><b>Medecin</b></legend>
+												<div class="label">
+													<label><b>Code Médecin :</b>.................................................... </label>
+													<label th:text="${patientsauver.medecinAffecter.codeMedecin}"></label>
+												</div>
+												<div class="label">
+													<label><b>Nom Médecin :</b>..................................................... </label>
+													<label th:text="${patientsauver.medecinAffecter.nomMedecin}"></label>
+													  <label th:text="${patientsauver.medecinAffecter.prenomMedecin}"></label>
+												</div>
+												<div class="label">
+													<label><b>Téléfone :</b>.......................................................... +</label>
+													<label th:text="${patientsauver.medecinAffecter.telefoneMedecin}"></label>
+												</div>
+												<div class="label">
+													<label><b>Email :</b>................................................................... </label>
+													<label th:text="${patientsauver.medecinAffecter.emailMedecin}"></label>
+												</div>
+												<div class="label">
+													<label><b>Spécialité :</b>............................................................ </label>
+													<label th:text="${patientsauver.medecinAffecter.speciality}"></label>
+												</div>
+												<div class="label">
+													<label><b>Heure rendez-vous :</b>............................................. </label>
+													<label th:text="${patientsauver.medecinAffecter.heureRDV}"></label>
+												</div>		
+									</fieldset>			
+									
+									
+									<fieldset class="hopital">
+									<legend><b>Hopital</b></legend>
+									
+												<div class="label">
+													<label><b>Nom de l'Hopital :</b>.................................................. </label>
+													<label th:text="${patientsauver.medecinAffecter.hopitalMedecin.nomHopital}"></label>
+												</div>	
+												<div class="label">
+													<label><b>Adresse Hopital :</b>................................................... </label>
+													<label th:text="${patientsauver.medecinAffecter.hopitalMedecin.adresseHopital}"></label>
+												</div>
+												<div class="label">
+													<label><b>Heure rendez-vous :</b>.............................................. </label>
+													<label th:text="${patientsauver.medecinAffecter.heureRDV}"></label>
+												</div>	
+												<div class="label">
+													<label><b>Mobile Hopital :</b>....................................................+ </label>
+													<label th:text="${patientsauver.medecinAffecter.hopitalMedecin.telefoneHopital}"></label>
+												</div>	
+																				
+											</div>
+			</div>
+<!-- 			<div class="logos"> -->
+<!-- 				 <img src="/images/logo.png" alt="logo !" width="120" height="120" class="logo"/>SOS_HOSPITAL+ -->
+<!-- 			</div> -->
+		
+</div>
+	<div class="copyrighte">
+		Copyright &copy;
+		<script>document.write(new Date().getFullYear());
+		</script> tous droit reservé réalisé  <i class="fa fa-heart-o" aria-hidden="true"></i> par  <a href="#" target="_blank">Eric Papain Mezatio & Kenley Favard</a>
+	</div>
+<center>
+</body>
+</html>
